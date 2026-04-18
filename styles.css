@@ -1,0 +1,180 @@
+/* Variables de colores para mantener consistencia */
+:root {
+    --primario: #2c3e50;
+    --secundario: #3498db;
+    --fondo: #ffffff;
+    --fondo-claro: #f8f9fa;
+    --texto: #333333;
+    --texto-claro: #777777;
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--primario);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secundario);
+}
+
+/* Encabezado (Hero) */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 60px; /* Compensa la navbar fija */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Secciones Generales */
+.seccion {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.bg-claro {
+    background-color: var(--fondo-claro);
+}
+
+.seccion h2 {
+    color: var(--primario);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+    color: var(--texto-claro);
+    margin-bottom: 3rem;
+}
+
+/* Tarjetas (Para Reflexiones y Eventos) */
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta {
+    background: var(--fondo);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: left;
+    border-top: 4px solid var(--secundario);
+}
+
+.tarjeta h3 {
+    color: var(--primario);
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta .fecha {
+    font-size: 0.9rem;
+    color: var(--secundario);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Formulario de Pedidos */
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--fondo);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.campo {
+    margin-bottom: 1.5rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primario);
+    font-weight: bold;
+}
+
+.campo input, .campo select, .campo textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-enviar {
+    background-color: var(--secundario);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #2980b9;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--primario);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
