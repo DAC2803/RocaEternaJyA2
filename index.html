@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad - Más Vida</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Mi Comunidad</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#reflexiones">Reflexiones</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#pedidos">Pedidos</a></li>
+        </ul>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenidos a nuestro espacio</h1>
+            <p>Un lugar para compartir, crecer y organizarnos juntos.</p>
+        </div>
+    </header>
+
+    <section id="reflexiones" class="seccion bg-claro">
+        <h2>Reflexiones Diarias</h2>
+        <div class="grid-tarjetas">
+            <article class="tarjeta">
+                <h3>El valor de la paciencia</h3>
+                <p class="fecha">18 de Abril</p>
+                <p>Hoy recordamos que los grandes resultados toman tiempo. Como un árbol que crece lentamente pero echa raíces profundas, nuestras metas requieren constancia y fe en el proceso.</p>
+            </article>
+            <article class="tarjeta">
+                <h3>Caminando en comunidad</h3>
+                <p class="fecha">17 de Abril</p>
+                <p>Nadie llega lejos caminando solo. Apoyarnos mutuamente en los momentos de dificultad es lo que le da verdadero sentido a este grupo.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="eventos" class="seccion">
+        <h2>Próximos Eventos</h2>
+        <p class="subtitulo">Cumpleaños, salidas y reuniones importantes.</p>
+        <div id="lista-eventos" class="grid-tarjetas"></div>
+    </section>
+
+    <section id="pedidos" class="seccion bg-claro">
+        <h2>Apartado de Pedidos</h2>
+        <p class="subtitulo">¿Tienes alguna petición especial o necesitas apoyo? Escríbenos.</p>
+        
+        <form action="https://formspree.io/f/TU_ID_AQUI" method="POST" class="formulario">
+            <div class="campo">
+                <label for="nombre">Tu Nombre</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
+            </div>
+            <div class="campo">
+                <label for="tipo_pedido">Tipo de Pedido</label>
+                <select id="tipo_pedido" name="tipo_pedido">
+                    <label for="tipo_pedido">Tipo de Pedido</label>
+                    <option value="oracion">Petición de Oración / Apoyo</option>
+                    <option value="ayuda_practica">Ayuda Práctica (Logística, etc.)</option>
+                    <option value="sugerencia">Sugerencia para el grupo</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="mensaje">Tu Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe los detalles aquí..."></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar Pedido</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mi Comunidad. Creado con dedicación.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
